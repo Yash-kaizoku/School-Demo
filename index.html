@@ -10,7 +10,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_responsive.css">
 </head>
 
 <body>
@@ -26,10 +26,11 @@
                     <i class="fas fa-graduation-cap"></i>
                     Ideal<span>School</span>
                 </div>
-                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-expanded="false"
+                    aria-controls="navLinks" type="button">
                     <i class="fas fa-bars"></i>
                 </button>
-                <ul class="nav-links" id="navLinks">
+                <ul class="nav-links" id="navLinks" aria-hidden="true">
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#admissions">Admissions</a></li>
@@ -274,7 +275,8 @@
     <!-- ============================================================ -->
     <div class="modal-overlay" id="loginModal">
         <div class="modal">
-            <button class="close-modal" id="closeLoginModal"><i class="fas fa-times"></i></button>
+            <button class="close-modal" id="closeLoginModal" aria-label="Close login" type="button"><i
+                    class="fas fa-times"></i></button>
             <h2>Welcome Back</h2>
             <p class="sub">Login to access your dashboard.</p>
             <div class="role-selector">
